@@ -119,15 +119,20 @@ function selectAnswer(e) {
   }
 }
 
-nextBtn.addEventListener("click", () => {
-  currentQuestionIndex++;
-  showQuestion();
-});
-
 function showResult() {
   quiz.style.display = "none";
   result.style.display = "block";
-  scoreElement.textContent = `Skor kamu : ${scoreElement} / ${questions.length}`;
+  scoreElement.textContent = `Skor kamu : ${score} / ${questions.length}`;
 }
+
+nextBtn.addEventListener("click", () => {
+  currentQuestionIndex++;
+  if (currentQuestionIndex < questions.length) {
+    showQuestion();
+  } else {
+    showResult();
+  }
+});
+
 
 startQuiz();
