@@ -1,32 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Sederhana</title>
     <link rel="stylesheet" href="style.css">
-    <title>Quizz</title>
 </head>
 <body>
     <div class="container">
-        <div class="quiz-container" id="quiz-container">
-            <h1>Quizz Programmer</h1>
-            <div class="question-container" id="question-container">
-                <p id="question">Question</p>
-            </div>
-
-            <div class="answer-buttons" id="answer-buttons">
-
-            </div>
-
-            <div class="next-btn" id="next-btn"></div>
-
-            <div class="result-container" id="result-container">
-                <p id="score"></p>
-                <button class="restart" id="restart"></button>
-            </div>
+        <h1>Quiz Sederhana</h1>
+        <div id="quiz-container">
+            <div id="question"></div>
+            <div id="options"></div>
+            <button id="next-button" class="hidden">Berikutnya</button>
+        </div>
+        <div id="result" class="hidden">
+            <h2>Hasil Anda: <span id="score"></span></h2>
+            <button id="restart-button">Ulangi Quiz</button>
         </div>
     </div>
-
-    <script src="js/main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
